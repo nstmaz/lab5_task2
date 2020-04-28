@@ -44,7 +44,7 @@ public class AbsTest {
         Assert.assertEquals(Math.abs(a), a);
     }
 
-    // dataprovider for 'a' - Integer.MIN_VALUE
+    // dataprovider for a - Integer.MIN_VALUE
     @DataProvider(name = "absMinValInt")
     public Object[][] absMinValDataProvider() {
         return new Object[][]{

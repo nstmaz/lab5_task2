@@ -37,7 +37,7 @@ public class FloorDivTest {
         };
     }
 
-    // (int x, int y) - arguments that cause ArithmeticException
+    // int x, int y - arguments that cause ArithmeticException
     @Test(dataProvider = "floorDivArithmeticExIntegers")
     public void floorDivArithmeticExTest(int x, int y) {
         // if the divisor y is 0

@@ -14,7 +14,7 @@ public class AddExactTest {
         Assert.assertEquals(Math.addExact(x, y), x + y);
     }
 
-    // dataprovider for (int x, int y) - ordinary integers
+    // dataprovider for int x, int y - ordinary integers
     @DataProvider(name = "addExactSumIntegers")
     public Object[][] addExactSumDataProvider() {
         return new Object[][]{
