@@ -1,14 +1,15 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 
 <suite name="Suite1">
-    <test name="Some test" >
-        <classes>
-            <class name="Math.AbsTest">
-            </class>
-            <class name="Math.AddExactTest"> </class>
-            <class name="Math.FloorDivTest"> </class>
-
-        </classes>
+    <test name="Math test" >
+        <packages>
+            <package name="Math" />
+        </packages>
+        <!--        <classes>-->
+        <!--            <class name="Math.AbsTest" />-->
+        <!--            <class name="Math.AddExactTest" />-->
+        <!--            <class name="Math.FloorDivTest" />-->
+        <!--        </classes>-->
     </test>
 
 </suite>
