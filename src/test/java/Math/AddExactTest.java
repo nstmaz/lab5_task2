@@ -40,9 +40,9 @@ public class AddExactTest {
             x2 = (r.nextInt(Integer.MAX_VALUE) + r.nextInt(2)) - r.nextInt(Math.abs(min));
         }
         else if (x1>0) {
-            min = Integer.MIN_VALUE;
+            min = Integer.MIN_VALUE+1;
             max = Integer.MAX_VALUE - x1;
-            x2 = (r.nextInt(max+1) - r.nextInt(min*(-1)));
+            x2 = r.nextInt(max) - r.nextInt(min*(-1));
         }
         else {
             x2 = r.nextInt();
