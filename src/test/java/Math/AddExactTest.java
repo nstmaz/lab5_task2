@@ -42,7 +42,7 @@ public class AddExactTest {
         else if (x1>0) {
             min = Integer.MIN_VALUE;
             max = Integer.MAX_VALUE - x1;
-            x2 = (r.nextInt(max+1) - r.nextInt(Math.abs(min)));
+            x2 = (r.nextInt(max+1) - r.nextInt(min*(-1)));
         }
         else {
             x2 = r.nextInt();
