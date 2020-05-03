@@ -4,7 +4,11 @@ import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import java.util.Random;
+
 public class AbsTest {
+
+    Random r = new Random();
 
     // 'a' - not negative int
     @Test(dataProvider = "absNotNegativeInt")
@@ -15,9 +19,10 @@ public class AbsTest {
 
     // dataprovider for 'a' - not negative int
     @DataProvider(name = "absNotNegativeInt")
-    public Object[][] absNotNegativeDataProvider() {
+    public Object[][] absNotNegativeDP() {
         return new Object[][]{
-                {1}
+                // return random int in range [0...Integer.MAX_VALUE]
+                {r.nextInt(Integer.MAX_VALUE) + r.nextInt(2)}
         };
     }
 
@@ -30,9 +35,10 @@ public class AbsTest {
 
     // dataprovider for 'a' - negative int
     @DataProvider(name = "absNegativeInt")
-    public Object[][] absNegativeDataProvider() {
+    public Object[][] absNegativeDP() {
         return new Object[][]{
-                {-1}
+                // return random int in range [Integer.MIN_VALUE+1...-1]
+                {-1 * (r.nextInt(Integer.MAX_VALUE - 1) + 1)}
         };
     }
 
@@ -44,9 +50,9 @@ public class AbsTest {
         Assert.assertEquals(Math.abs(a), a);
     }
 
-    // dataprovider for a - Integer.MIN_VALUE
+    // dataprovider for 'a' - Integer.MIN_VALUE
     @DataProvider(name = "absMinValInt")
-    public Object[][] absMinValDataProvider() {
+    public Object[][] absMinValDP() {
         return new Object[][]{
                 {Integer.MIN_VALUE}
         };
